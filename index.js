@@ -17,6 +17,7 @@ const unknownEndpoint = (request, response) => {
 //if we want them to be executed before the route event handlers are called. 
 app.use(requestLogger)
 app.use(express.json())
+app.use(express.static('build'))
 app.use(cors())
 
 let notes = [
